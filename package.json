@@ -1,0 +1,8 @@
+{
+  "name": "FastFeet",
+  "version": "1.0.0",
+  "description": "Desafio numero 02 do curso da rocketseat ",
+  "main": "index.js",
+  "author": "Hugo Eduardo",
+  "license": "MIT"
+}

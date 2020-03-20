@@ -1,15 +1,21 @@
-import Sequelize from 'sequelize'
+import Sequelize from 'sequelize';
+
+import User from '../app/models/user';
+import Receiver from '../app/models/receiver';
 
 import databaseConfig from '../config/database';
 
-class Database{
-  constructor(){
+const models = [User, Receiver];
 
+class Database {
+  constructor() {
+    this.init();
   }
-  init(){
 
+  init() {
     this.connection = new Sequelize(databaseConfig);
 
+    models.map(model => model.init(this.connection));
   }
 }
 
